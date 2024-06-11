@@ -15,11 +15,11 @@ This repository includes code for a Docker setup with 3 containers:
 export TODO_APP_REPOSITORY="{path_to_repository}/test/src"
 ```
 3. Windows users need to install Docker Hub on the system,In case of a linux user add the following lines in the Docker file for MongoDB set up:
-RUN ln -s /bin/echo /bin/systemctl
-RUN wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add -
-RUN echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/4.4 main" | tee /etc/apt/sources.list.d/mongodb-org-4.4.list
-RUN apt-get -y update
-RUN apt-get install -y mongodb-org
+* RUN ln -s /bin/echo /bin/systemctl
+* RUN wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add -
+* RUN echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/4.4 main" | tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+* RUN apt-get -y update
+* RUN apt-get install -y mongodb-org
 ```
 
 5. Build container (you only need to build containers for the first time or if you change image definition, i.e., `Dockerfile`). This step will take a good amount of time.
